@@ -1,0 +1,19 @@
+include "%H/.local/share/omarchy/default/xcompose"
+
+# Identification
+<Multi_key> <space> <n> : "Lucas Stilborg"
+<Multi_key> <space> <e> : "lucas@stilborg.dev"
+
+# --- Custom Danish Mappings ---
+
+# Compose + [  -->  å
+<Multi_key> <bracketleft> : "å"   U00E5
+<Multi_key> <braceleft>   : "Å"   U00C5  # Shift + [
+
+# Compose + '  -->  ø
+<Multi_key> <apostrophe>  : "ø"   U00F8
+<Multi_key> <quotedbl>    : "Ø"   U00D8  # Shift + '
+
+# Compose + ;  -->  æ
+<Multi_key> <semicolon>   : "æ"   U00E6
+<Multi_key> <colon>       : "Æ"   U00C6  # Shift + ;
