@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Shaaux's custom keybindings cheatsheet
+# Displayed using walker menu
+
+cat << 'EOF' | walker --dmenu -p 'Shaaux Bindings' --width 800
+── TMUX (Prefix: Ctrl + Space) ─────────────────────────────────────────────────
+Prefix + I                          → Install plugins
+Prefix + "                          → Split pane vertical
+Prefix + %                          → Split pane horizontal
+Prefix + c                          → New window
+Prefix + n                          → Next window
+Prefix + p                          → Previous window
+Prefix + d                          → Detach session
+Prefix + w                          → List windows
+Prefix + x                          → Kill pane
+Prefix + &                          → Kill window
+Prefix + z                          → Toggle pane zoom
+Prefix + [                          → Enter copy mode
+Alt + Shift + H                     → Previous window (no prefix)
+Alt + Shift + L                     → Next window (no prefix)
+Ctrl + h/j/k/l                      → Navigate panes (vim-tmux-navigator)
+
+── TMUX Copy Mode (vi-mode) ────────────────────────────────────────────────────
+v                                   → Begin selection
+Ctrl + v                            → Rectangle selection toggle
+y                                   → Copy selection and exit
+EOF
