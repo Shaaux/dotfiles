@@ -1,4 +1,4 @@
-# My dotfiles
+# My Dotfiles
 
 This directory contains the dotfiles for my system
 
@@ -8,13 +8,13 @@ Ensure you have the following installed on your system
 
 ### Git
 
-```
+```terminal
 pacman -S git
 ```
 
 ### Stow
 
-```
+```terminal
 pacman -S stow
 ```
 
@@ -22,13 +22,13 @@ pacman -S stow
 
 First, check out the dotfiles repo in your $HOME directory using git
 
-```
-$ git clone git@github.com/dreamsofautonomy/dotfiles.git
-$ cd dotfiles
+```terminal
+git@github.com:Shaaux/OmarchyDotfiles.git
+cd dotfiles
 ```
 
-then use GNU stow to create symlinks
+Then use GNU stow to create symlinks
 
-```
-$ stow .
+```terminal
+stow .
 ```
