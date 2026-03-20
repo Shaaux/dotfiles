@@ -12,6 +12,12 @@ curl -fsS https://dl.brave.com/install.sh | sh
 echo "[*] Installing Tmux Plugin Manager (TPM)..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# --- Kanata (key remapper) ---
+echo "[*] Installing Kanata..."
+yay -S --noconfirm kanata
+stow -d ~/dotfiles -t ~ kanata
+systemctl --user enable --now kanata
+
 # --- Add more install commands below ---
 
 echo ""

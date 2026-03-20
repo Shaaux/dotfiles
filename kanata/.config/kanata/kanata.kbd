@@ -1,0 +1,33 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  caps esc lalt scln ' [ lsft rsft
+)
+
+(defalias
+  cap  (tap-hold 200 200 esc lctl)
+  dan  (multi lalt (layer-while-held danish))
+  dsft (multi lsft (layer-while-held danish-upper))
+
+  ae  (multi (release-key lalt) (unicode æ))
+  oe  (multi (release-key lalt) (unicode ø))
+  aa  (multi (release-key lalt) (unicode å))
+
+  AE  (multi (release-key lalt) (release-key lsft) (release-key rsft) (unicode Æ))
+  OE  (multi (release-key lalt) (release-key lsft) (release-key rsft) (unicode Ø))
+  AA  (multi (release-key lalt) (release-key lsft) (release-key rsft) (unicode Å))
+)
+
+(deflayer base
+  @cap  caps  @dan  _    _   _   lsft  rsft
+)
+
+(deflayer danish
+  _     _     _     @ae  @oe @aa @dsft @dsft
+)
+
+(deflayer danish-upper
+  _     _     _     @AE  @OE @AA _     _
+)
