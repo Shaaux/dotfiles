@@ -22,6 +22,13 @@ else
   run_step "Installing Brave Browser" bash -c 'curl -fsS https://dl.brave.com/install.sh | sh'
 fi
 
+# --- python-nautilus (for extensions) ---
+if pacman -Q python-nautilus &>/dev/null; then
+  echo "[~] python-nautilus already installed, skipping."
+else
+  run_step "Installing python-nautilus" sudo pacman -S --noconfirm python-nautilus
+fi
+
 # --- Kanata (key remapper) ---
 if command -v kanata &>/dev/null; then
   echo "[~] Kanata already installed, skipping package install."
