@@ -1,9 +1,6 @@
 # Dynamic theme colors
 config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 
-# Auto-start tmux
-command = tmux new-session -A -s main
-
 # Font
 font-family = "JetBrainsMono Nerd Font"
 font-style = Regular

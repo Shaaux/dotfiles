@@ -22,14 +22,6 @@ else
   run_step "Installing Brave Browser" bash -c 'curl -fsS https://dl.brave.com/install.sh | sh'
 fi
 
-# --- Tmux Plugin Manager ---
-if [ -d "$HOME/.tmux/plugins/tpm" ]; then
-  echo "[~] TPM already installed, skipping."
-else
-  run_step "Installing Tmux Plugin Manager (TPM)" \
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-fi
-
 # --- Kanata (key remapper) ---
 if command -v kanata &>/dev/null; then
   echo "[~] Kanata already installed, skipping package install."
