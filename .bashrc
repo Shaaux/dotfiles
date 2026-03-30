@@ -15,6 +15,9 @@ export PATH=/home/shaaux/.opencode/bin:$PATH
 
 set -h
 
+# Gitmal to pythonpath for modules
+export PYTHONPATH=~/gdrive/Obsidian/PKM/Atlas/Maps/Uni/MAL/Exercises:$PYTHONPATH
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/shaaux/anaconda3/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
