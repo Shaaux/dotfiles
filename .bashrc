@@ -13,6 +13,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # opencode
 export PATH=/home/shaaux/.opencode/bin:$PATH
 
+export ANTHROPIC_API_KEY=""
 set -h
 
 # Gitmal to pythonpath for modules
@@ -32,3 +33,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+. "$HOME/.local/share/../bin/env"
