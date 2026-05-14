@@ -35,3 +35,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 . "$HOME/.local/share/../bin/env"
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
