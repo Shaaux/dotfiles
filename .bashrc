@@ -39,3 +39,4 @@ unset __conda_setup
 # Add JBang to environment
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
+. "$HOME/.cargo/env"
