@@ -9,32 +9,16 @@ source ~/.local/share/omarchy/default/bash/rc
 export PATH="$HOME/.cargo/bin:$PATH"
 # Make an alias for invoking commands you use constantly
 # alias p='python'
+alias lg='lazygit'
+alias y='yazi'
+alias oc='opencode'
+alias ca='claude'
+alias cac='claude --continue'
 
 # opencode
 export PATH=/home/shaaux/.opencode/bin:$PATH
 
-export ANTHROPIC_API_KEY=""
 set -h
-
-# Gitmal to pythonpath for modules
-export PYTHONPATH=~/gdrive/Obsidian/PKM/Atlas/Maps/Uni/MAL/Exercises:$PYTHONPATH
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/shaaux/anaconda3/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
-if [ $? -eq 0 ]; then
-  eval "$__conda_setup"
-else
-  if [ -f "/home/shaaux/anaconda3/etc/profile.d/conda.sh" ]; then
-    . "/home/shaaux/anaconda3/etc/profile.d/conda.sh"
-  else
-    export PATH="/home/shaaux/anaconda3/bin:$PATH"
-  fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-. "$HOME/.local/share/../bin/env"
 
 # Add JBang to environment
 alias j!=jbang
