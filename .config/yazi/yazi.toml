@@ -1,0 +1,9 @@
+[opener]
+inkscape = [
+  { run = 'inkscape "$@"', desc = "Inkscape", orphan = true },
+]
+
+[open]
+prepend_rules = [
+  { mime = "image/svg+xml", use = ["inkscape"] },
+]
