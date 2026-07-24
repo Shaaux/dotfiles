@@ -1,1 +1,0 @@
-/home/shaaux/.config/omarchy/current/theme/neovim.lua
