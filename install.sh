@@ -15,19 +15,23 @@ run_step() {
 echo "=== Shaaux Install Script ==="
 echo ""
 
-# --- Brave Browser ---
-if command -v brave &>/dev/null || command -v brave-browser &>/dev/null; then
-  echo "[~] Brave already installed, skipping."
-else
-  run_step "Installing Brave Browser" bash -c 'curl -fsS https://dl.brave.com/install.sh | sh'
-fi
+# --- TODO: Add install of firefox ---
 
-# --- python-nautilus (for extensions) ---
-if pacman -Q python-nautilus &>/dev/null; then
-  echo "[~] python-nautilus already installed, skipping."
-else
-  run_step "Installing python-nautilus" sudo pacman -S --noconfirm python-nautilus
-fi
+# TODO: Add install of yazi with all its dependencies
+
+# TODO: Run the Omarchy remove preinstalls script, then install the things i did need from that to debloat
+
+# TODO: Install zsh and set it as default shell
+
+# TODO: Install CLIAmp
+
+# TODO: Install Vesktop, remove discord
+
+# TODO: Install Zathura
+
+# TODO: Remove typora and xournal++
+
+# TODO: Install Insync
 
 # --- Kanata (key remapper) ---
 if command -v kanata &>/dev/null; then
@@ -37,7 +41,7 @@ else
 fi
 
 if [ ! -f "$HOME/.config/kanata/kanata.kbd" ]; then
-  run_step "Stowing Kanata config" stow -d ~/dotfiles -t ~ kanata
+  run_step "Stowing Kanata config" stow .
 else
   echo "[~] Kanata config already stowed, skipping."
 fi
