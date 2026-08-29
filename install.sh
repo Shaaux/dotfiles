@@ -33,24 +33,32 @@ echo ""
 
 # TODO: Install Insync
 
-# --- Kanata (key remapper) ---
-if command -v kanata &>/dev/null; then
-  echo "[~] Kanata already installed, skipping package install."
+# --- keyd (key remapper: Left Alt + ; ' [ types æ ø å, caps/esc swapped) ---
+if command -v keyd &>/dev/null; then
+  echo "[~] keyd already installed, skipping package install."
 else
-  run_step "Installing Kanata via AUR" yay -S --noconfirm kanata
+  run_step "Installing keyd" sudo pacman -S --noconfirm keyd
 fi
 
-if [ ! -f "$HOME/.config/kanata/kanata.kbd" ]; then
-  run_step "Stowing Kanata config" stow .
+if [ ! -f "$HOME/.XCompose" ]; then
+  run_step "Stowing dotfiles" stow .
 else
-  echo "[~] Kanata config already stowed, skipping."
+  echo "[~] Dotfiles already stowed, skipping."
 fi
 
-if ! systemctl --user is-enabled --quiet kanata 2>/dev/null; then
-  run_step "Enabling Kanata user service" systemctl --user enable --now kanata
+if ! sudo cmp -s etc/keyd/default.conf /etc/keyd/default.conf; then
+  run_step "Installing keyd config" sudo install -Dm644 etc/keyd/default.conf /etc/keyd/default.conf
 else
-  echo "[~] Kanata service already enabled, skipping."
+  echo "[~] keyd config already up to date, skipping."
 fi
+
+if ! systemctl is-enabled --quiet keyd 2>/dev/null; then
+  run_step "Enabling keyd service" sudo systemctl enable --now keyd
+else
+  run_step "Reloading keyd config" sudo keyd reload
+fi
+
+run_step "Applying XCompose sequences" omarchy-restart-xcompose
 
 # --- Summary ---
 echo ""

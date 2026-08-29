@@ -1,0 +1,24 @@
+# Run omarchy-restart-xcompose to apply changes
+
+# Include fast emoji access
+include "%H/.local/share/omarchy/default/xcompose"
+
+# Danish letters (compose key = Right Alt)
+# Lowercase: RightAlt → ; ' [
+<Multi_key> <semicolon>    : "æ"
+<Multi_key> <apostrophe>   : "ø"
+<Multi_key> <bracketleft>  : "å"
+# Uppercase: RightAlt → Shift+; Shift+' Shift+[  (i.e. : " {)
+<Multi_key> <colon>        : "Æ"
+<Multi_key> <quotedbl>     : "Ø"
+<Multi_key> <braceleft>    : "Å"
+
+# keyd unicode output (Left Alt + ; ' [ danish layer in /etc/keyd/default.conf).
+# Only the 6 sequences we need, not the full /usr/share/keyd/keyd.compose,
+# to avoid the GTK4 crash bug on large XCompose tables.
+<Cancel> <0> <1> <x> : "Å"
+<Cancel> <0> <1> <y> : "Æ"
+<Cancel> <0> <2> <g> : "Ø"
+<Cancel> <0> <2> <t> : "å"
+<Cancel> <0> <2> <u> : "æ"
+<Cancel> <0> <3> <c> : "ø"
