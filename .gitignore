@@ -1,2 +1,5 @@
 # Python bytecode
 __pycache__/
+
+# Per-machine overrides (see .bashrc.local.example)
+/.bashrc.local

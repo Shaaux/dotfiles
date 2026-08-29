@@ -1,0 +1,6 @@
+# Copy this file to ~/.bashrc.local (not tracked in git) and uncomment
+# whatever applies to this specific machine. .bashrc sources it automatically
+# if it exists.
+
+# Unity CLI (laptop only)
+# case ":${PATH}:" in *:"$HOME/.local/bin":*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
